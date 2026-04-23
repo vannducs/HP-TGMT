@@ -1,0 +1,10 @@
+import cv2
+img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
+loc = cv2.blur(img, (3,3))
+gray = cv2.cvtColor(loc, cv2.COLOR_BGR2GRAY)
+canny = cv2.Canny(gray, 50,150)
+contours, _ = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+kq = cv2.drawContours(img, contours, -1, (0,255,0),2)
+cv2.imshow("Ketqua",kq)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

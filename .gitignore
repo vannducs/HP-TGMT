@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ảnh lưu tạm
+*.jpg
+*.png
+*.mp4
+
+# Môi trường ảo
+venv/
+.env
+
+# VS Code
+.vscode/
