@@ -16,4 +16,4 @@ while True:
     cv2.imshow("Trackbar",kq)
     if cv2.waitKey(1)==ord("q"):break
 
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 

@@ -5,7 +5,7 @@ import cv2
 img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
 h, w = img.shape[:2]
 gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-gray= cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+gray= cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR) 
 img1=cv2.rectangle(gray,(100,100),(200,200),(0,0,255),3)
 img2=cv2.circle(img1,(w//2,h//2),100,(255,255,0),-1)
 img3=cv2.ellipse(img2,(w//2,h//2),(200,100),0,0,360,(255,0,0),2)

@@ -16,7 +16,7 @@ while True:
     alpha = cv2.getTrackbarPos("Tuongphan","Trackbar")
     if k==0: k=1
     if alpha==0: alpha=1
-    kq = cv2.blur(anh,(k,k))
+    kq = cv2.blur(anh,(k,k)) 
     kq = cv2.convertScaleAbs(kq, alpha=alpha, beta=0)
     cv2.imshow("Trackbar",kq)
     key = cv2.waitKey(1)

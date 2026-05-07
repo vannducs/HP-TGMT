@@ -4,7 +4,7 @@ c=0
 while True:
     ret, frame = cap.read()
     cv2.imshow("Video",frame)
-    k = cv2.waitKey(1)
+    k = cv2.waitKey(1) 
     if k==ord("s"):
         filename = f"anh{c}.jpg"
         cv2.imwrite(filename,frame)

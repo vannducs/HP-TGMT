@@ -10,7 +10,7 @@ img3 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BIN
 
 contours, _ = cv2.findContours(laplace,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 img4 = cv2.drawContours(img,contours,-1,(0,255,0),2)
-s = cv2.contourArea(contours[3])
+s = cv2.contourArea(contours[3]) 
 p = cv2.arcLength(contours[3],True)
 print("Dien tich contours[3]=",s)
 print("Chu vi contours[3]=",p)

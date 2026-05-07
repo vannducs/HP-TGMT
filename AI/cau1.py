@@ -6,7 +6,7 @@
 import cv2
 import matplotlib.pyplot as plt
 img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
-h, w=img.shape[:2]
+h, w=img.shape[:2] 
 print(f"Chieu rong la {w}, chieu cao la {h}")
 b,g,r = img[150,200]
 print(f"Gia tri mau la b:{b},g:{g},r:{r}")

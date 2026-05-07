@@ -26,7 +26,7 @@ while True:
         h,w = img.shape[:2]
         dichchuyen = cv2.warpAffine(img, M, (w,h))
         laplacian = cv2.Laplacian(dichchuyen,cv2.CV_64F,3)
-        lap = cv2.convertScaleAbs(laplacian)
+        lap = cv2.convertScaleAbs(laplacian) 
         plt.subplot(131),plt.imshow(img, cmap="gray")
         plt.axis("off"), plt.title("Anh goc")
         plt.subplot(132),plt.imshow(dichchuyen, cmap="gray")

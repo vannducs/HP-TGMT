@@ -6,7 +6,7 @@ gray = cv2.cvtColor(loc, cv2.COLOR_BGR2GRAY)
 canny = cv2.Canny(gray, 100,200)
 contours, _ = cv2.findContours(canny,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 draw = cv2.drawContours(img, contours,-1, (0,255,0),2)
-cv2.imshow("Ketqua",draw)
+cv2.imshow("Ketqua",draw) 
 #DIENTICH CONTOURS
 s = cv2.contourArea(contours[0])
 print("Dien tich: ", s)

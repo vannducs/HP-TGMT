@@ -6,7 +6,7 @@ while True:
     ret, frame = cap.read()
     if not ret: break
     anhx=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    cv2.imshow("Video",anhx)
+    cv2.imshow("Video",anhx) 
     key = cv2.waitKey(1)
     if key == ord("s"):
         filename=f"anh{count}.jpg"

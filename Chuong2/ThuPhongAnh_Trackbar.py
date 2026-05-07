@@ -6,7 +6,7 @@ cv2.createTrackbar("TyLe","Trackbar",1,10,nothing)
 while True:
     tyle = cv2.getTrackbarPos("TyLe","Trackbar")
     h,w = img.shape[:2]
-    if tyle==0:
+    if tyle==0: 
         tyle=1
     kq= cv2.resize(img,(w*tyle,h*tyle))
     cv2.imshow("Trackbar",kq)

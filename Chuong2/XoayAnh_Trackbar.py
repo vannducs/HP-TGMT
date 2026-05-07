@@ -8,7 +8,7 @@ tachbien = cv2.Canny(anhloc,100,200)
 cv2.namedWindow("Trackbar")
 def nothing(x): pass
 cv2.createTrackbar("XoayAnh","Trackbar",0,360,nothing)
-h,w=tachbien.shape[:2]
+h,w=tachbien.shape[:2] 
 while True:
     gx = cv2.getTrackbarPos("XoayAnh","Trackbar")
     M = cv2.getRotationMatrix2D((w//2,h//2),gx,1)

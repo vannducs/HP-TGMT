@@ -7,7 +7,7 @@
 #f. In ra diện tích, chu vi của contour lớn nhất
 #g. Vẽ hình chữ nhật bao quanh contour lớn nhất
 #h. Hiển thị ảnh gốc, ảnh Otsu, ảnh Canny, ảnh contours trên matplotlib
-import cv2
+import cv2 
 import matplotlib.pyplot as plt
 img = cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
 loc = cv2.bilateralFilter(img, 9,75,75)

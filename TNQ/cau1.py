@@ -15,7 +15,7 @@ if alpha<=0:
 kq1= cv2.convertScaleAbs(img, alpha=alpha, beta=0)
 cv2.imwrite("tuongphan.jpg",kq1)
 x1=int(input("Nhap toa do cat anh x1: "))
-y1=int(input("Nhap toa do cat anh y1: "))
+y1=int(input("Nhap toa do cat anh y1: ")) 
 x2=int(input("Nhap toa do cat anh x2: "))
 y2=int(input("Nhap toa do cat anh y2: "))
 kq2=img[y1:y2,x1:x2]

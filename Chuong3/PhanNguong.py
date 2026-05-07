@@ -22,7 +22,7 @@ while True:
 img= cv2.imread("Anh0.jpg")
 M = np.float32([[1,0,50],[0,1,-10]])
 h,w = img.shape[:2]
-img1 = cv2.warpAffine(img,M,(w,h)) #1
+img1 = cv2.warpAffine(img,M,(w,h)) #1 
 
 M1 = cv2.getRotationMatrix2D((w//2,h//2),180,1)
 img2= cv2.warpAffine(img, M1, (w,h))

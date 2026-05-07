@@ -6,7 +6,7 @@ img = cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray2 = cv2.convertScaleAbs(gray,alpha=1, beta=90)
 cv2.namedWindow("Trackbar")
-def nothing(x):pass
+def nothing(x):pass 
 cv2.createTrackbar("TrucX","Trackbar",0,1000,nothing)
 cv2.createTrackbar("TrucY","Trackbar",0,500,nothing)
 while True:

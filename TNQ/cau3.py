@@ -21,7 +21,7 @@ lap = cv2.Laplacian(gray,cv2.CV_64F,3)
 imgj = cv2.convertScaleAbs(lap)
 
 plt.subplot(421), plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-plt.axis("off"), plt.title("AnhGoc")
+plt.axis("off"), plt.title("AnhGoc") 
 plt.subplot(422), plt.imshow(cv2.cvtColor(imga, cv2.COLOR_BGR2RGB))
 plt.axis("off"), plt.title("Gauss")
 plt.subplot(423), plt.imshow(imgb, cmap = "gray")

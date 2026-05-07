@@ -4,7 +4,7 @@
 #c. Lọc ảnh bằng GaussianBlur với kernel lấy từ trackbar
 #d. Thay đổi độ sáng ảnh với giá trị lấy từ trackbar
 #e. Nhấn phím S để lưu ảnh, nhấn Q để thoát
-import cv2
+import cv2 
 img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
 cv2.namedWindow("Trackbar")
 def nothing(x):pass

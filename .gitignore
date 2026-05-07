@@ -11,6 +11,5 @@ __pycache__/
 # Môi trường ảo
 venv/
 .env
-
 # VS Code
 .vscode/

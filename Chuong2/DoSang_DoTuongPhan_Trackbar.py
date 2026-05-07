@@ -8,7 +8,7 @@ while True:
     alpha = cv2.getTrackbarPos("DoTuongPhan","Trackbar")/2
     beta = cv2.getTrackbarPos("DoSang","Trackbar")-127
     kq=cv2.convertScaleAbs(img,alpha,beta)
-    cv2.imshow("Trackbar",kq)
+    cv2.imshow("Trackbar",kq) 
     if cv2.waitKey(1)==ord("q"): break
 
 cv2.destroyAllWindows()

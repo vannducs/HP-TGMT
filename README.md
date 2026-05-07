@@ -7,7 +7,7 @@
 ### Chương 3: Tách biên và phát hiện biên
 
 ## Thư viện sử dụng
-- OpenCV
+- OpenCV 
 - NumPy
 - Matplotlib
 

@@ -12,7 +12,7 @@ gray = cv2.cvtColor(locanh, cv2.COLOR_BGR2GRAY)
 laplacian = cv2.Laplacian(gray,cv2.CV_64F,3)
 tachbien = cv2.convertScaleAbs(laplacian)
 M = np.float32([[1,0,100],[0,1,0]])
-h,w = tachbien.shape[:2]
+h,w = tachbien.shape[:2] 
 kq = cv2.warpAffine(tachbien,M,(w,h))
 h_pre, w_pre = img.shape[:2]
 print(f"Kich thuoc anh ban dau lan luot la: {h_pre}x{w_pre}" )

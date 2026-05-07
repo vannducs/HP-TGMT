@@ -5,5 +5,5 @@ k = cv2.waitKey(0)
 if k==ord("s"):
     cv2.imwrite("Chuong1/anh.jpg",img)
 
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 
 

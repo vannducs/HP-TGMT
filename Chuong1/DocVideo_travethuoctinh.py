@@ -5,7 +5,7 @@ cap = cv2.VideoCapture(r"C:\Users\DELL\Downloads\PXL_20260118_043751636.mp4")
 count = 0
 fps = cap.get(cv2.CAP_PROP_FPS)
 total_frame = cap.get(cv2.CAP_PROP_FRAME_COUNT)
-time = total_frame/fps
+time = total_frame/fps 
 while True:
     ret, frame = cap.read()
     if not ret: break

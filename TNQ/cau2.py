@@ -13,7 +13,7 @@ cv2.createTrackbar("DX","Trackbar",0,500,nothing)
 cv2.createTrackbar("DY","Trackbar",0,500,nothing)
 h,w=img.shape[:2]
 while True:
-    k= cv2.getTrackbarPos("Matna","Trackbar")
+    k= cv2.getTrackbarPos("Matna","Trackbar") 
     dx=cv2.getTrackbarPos("DX","Trackbar")
     dy=cv2.getTrackbarPos("DY","Trackbar")
     kq=cv2.blur(img,(k,k))

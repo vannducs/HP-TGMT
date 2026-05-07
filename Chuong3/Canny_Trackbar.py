@@ -6,7 +6,7 @@ cv2.namedWindow("Trackbar")
 def nothing(x): pass
 cv2.createTrackbar("Threshold1","Trackbar",0,200,nothing)
 cv2.createTrackbar("Threshold2","Trackbar",0,200,nothing)
-while True:
+while True: 
     t1=cv2.getTrackbarPos("Threshold1","Trackbar")
     t2=cv2.getTrackbarPos("Threshold2","Trackbar")
     canny = cv2.Canny(gray,t1,t2)
