@@ -1,15 +1,30 @@
-#Viết chương trình đọc ảnh, lấy track bar chỉnh độ sáng và độ tương phản cho ảnh
+#Viết chương trình đọc video, nhấn s để lấy ra 1 ảnh
+#lấy track bar chỉnh độ sáng và độ tương phản cho ảnh màu
 import cv2
-img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
-cv2.namedWindow("Trackbar")
-def nothing(x):pass
-cv2.createTrackbar("DoTuongPhan","Trackbar",1,3,nothing)
-cv2.createTrackbar("DoSang","Trackbar",128,254,nothing)
+cap = cv2.VideoCapture(0)
+cv2.namedWindow("Anh")
+def nothing(x): pass
+cv2.createTrackbar("DTP","Anh",0,2,nothing)
+cv2.createTrackbar("DS","Anh",0,255,nothing)
+img =None
 while True:
-    alpha = cv2.getTrackbarPos("DoTuongPhan","Trackbar")/2
-    beta = cv2.getTrackbarPos("DoSang","Trackbar")-127
-    kq=cv2.convertScaleAbs(img,alpha,beta)
-    cv2.imshow("Trackbar",kq) 
-    if cv2.waitKey(1)==ord("q"): break
+    ret, frame = cap.read()
+    if not ret: break
+    cv2.imshow("Video",frame)
+    k=cv2.waitKey(1)
+    if k==ord("s"):
+        img = frame.copy()
 
+    if img is not None: 
+        alpha = cv2.getTrackbarPos("DTP","Anh")*0.25
+        beta = cv2.getTrackbarPos("DS","Anh")
+        alpha = max(alpha, 0.1)
+        kq = cv2.convertScaleAbs(img, alpha=alpha, beta=beta)
+        cv2.imshow("Anh",kq)
+    
+    if k==ord("q"):
+        break
+
+cap.release()
 cv2.destroyAllWindows()
+
