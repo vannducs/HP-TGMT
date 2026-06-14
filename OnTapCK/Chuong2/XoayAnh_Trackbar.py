@@ -1,19 +1,20 @@
-#Dùng bộ lọc trung bình lọc ảnh, tách biên canny cho ảnh
+#Phân ngưỡng thích nghi cho ảnh
 #xoay ảnh với góc xoay lấy từ trackbar
 import cv2
-img=cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-anhloc = cv2.blur(gray, (3,3))
-tachbien = cv2.Canny(anhloc,100,200)
-cv2.namedWindow("Trackbar")
-def nothing(x): pass
-cv2.createTrackbar("XoayAnh","Trackbar",0,360,nothing)
-h,w=tachbien.shape[:2] 
+img = cv2.imread(r"C:\Users\DELL\Downloads\he.jpg")
+loc = cv2.GaussianBlur(img, (5,5),0)
+xam = cv2.cvtColor(loc, cv2.COLOR_BGR2GRAY)
+thresh = cv2.adaptiveThreshold(xam,255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 7,0)
+
+cv2.namedWindow("Anh")
+def nothing(x):pass
+h, w = thresh.shape[:2]
+cv2.createTrackbar("GX","Anh",0,360,nothing)
 while True:
-    gx = cv2.getTrackbarPos("XoayAnh","Trackbar")
+    gx = cv2.getTrackbarPos("GX","Anh")
     M = cv2.getRotationMatrix2D((w//2,h//2),gx,1)
-    kq = cv2.warpAffine(tachbien,M,(w,h))
-    cv2.imshow("Trackbar",kq)
-    if cv2.waitKey(1)==ord("q"): break
+    kq = cv2.warpAffine(thresh, M, (w,h))
+    cv2.imshow("Anh",kq)
+    if cv2.waitKey(1)==ord("q"):break
 
 cv2.destroyAllWindows()
